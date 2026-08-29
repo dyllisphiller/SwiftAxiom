@@ -1,0 +1,29 @@
+//
+//  Statement.swift
+//  SwiftAxiom RDF Primitives
+//  © 2026 Dylan Umsted <dylan@umsted.org>
+//
+
+/// Represents a single triple (subject–predicate–object) or quad (subject–predicate–object–graph) statement.
+public struct Statement: Sendable {
+
+    /// The resource being described by the statement.
+    public let subject: RDFSubject
+
+    /// The predicate, property, or attribute of the resource being described by the statement.
+    public let predicate: IRI
+
+    /// The value of the predicate of the statement.
+    public let object: RDFObject
+
+    /// The graph or context in which this statement is true.
+    public let graph: IRI?
+
+    /// Creates a subject–predicate–object statement with an optional graph context.
+    public init(_ subject: RDFSubject, _ predicate: IRI, _ object: RDFObject, _ graph: IRI? = nil) {
+        self.subject = subject
+        self.predicate = predicate
+        self.object = object
+        self.graph = graph
+    }
+}
