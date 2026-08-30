@@ -8,4 +8,5 @@
 
 public enum RDFPredicate: Codable, Sendable {
     case iri(IRI)
+    case prefixedName(String)
 }
