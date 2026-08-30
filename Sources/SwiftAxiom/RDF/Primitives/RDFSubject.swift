@@ -1,7 +1,9 @@
 //
 //  RDFSubject.swift
-//  SwiftAxiom RDF Primitives
-//  © 2026 Dylan Umsted <dylan@umsted.org>
+//  SwiftAxiom / RDF / Primitives
+//
+//  Created on 2026-08-28 by Dylan Umsted.
+//  © 2026 Dylan Umsted <dylan@umsted.org>.
 //
 
 public enum RDFSubject: Sendable {

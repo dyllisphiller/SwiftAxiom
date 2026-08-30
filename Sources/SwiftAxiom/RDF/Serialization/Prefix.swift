@@ -1,7 +1,9 @@
 //
 //  Prefix.swift
-//  SwiftAxiom RDF SerializationMetadata
-//  © 2026 Dylan Umsted <dylan@umsted.org>
+//  SwiftAxiom / RDF / Serialization
+//
+//  Created on 2026-08-28 by Dylan Umsted.
+//  © 2026 Dylan Umsted <dylan@umsted.org>.
 //
 
 /// Represents a prefix used in certain serializations of RDF to allow for concise reuse of base IRIs.

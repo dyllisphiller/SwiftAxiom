@@ -1,7 +1,9 @@
 //
 //  Base.swift
-//  SwiftAxiom RDF SerializationMetadata
-//  © 2026 Dylan Umsted <dylan@umsted.org>
+//  SwiftAxiom / RDF / SerializationMetadata
+//
+//  Created on 2026-08-28 by Dylan Umsted.
+//  © 2026 Dylan Umsted <dylan@umsted.org>.
 //
 
 /// Represents the IRI upon which relative IRIs should be based.
