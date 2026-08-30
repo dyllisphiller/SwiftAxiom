@@ -7,5 +7,5 @@
 //
 
 public struct BlankNode: Identifiable, Sendable {
-    public var id: Int
+    public let id: String
 }
