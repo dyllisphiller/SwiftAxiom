@@ -6,4 +6,6 @@
 //  © 2026 Dylan Umsted <dylan@umsted.org>.
 //
 
-public typealias RDFPredicate = IRI
+public enum RDFPredicate: Sendable {
+    case iri(IRI)
+}

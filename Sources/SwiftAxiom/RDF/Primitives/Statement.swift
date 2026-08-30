@@ -13,7 +13,7 @@ public struct Statement: Sendable {
     public let subject: RDFSubject
 
     /// The predicate, property, or attribute of the resource being described by the statement.
-    public let predicate: IRI
+    public let predicate: RDFPredicate
 
     /// The value of the predicate of the statement.
     public let object: RDFObject
