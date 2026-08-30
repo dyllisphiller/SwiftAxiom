@@ -7,7 +7,7 @@
 //
 
 /// The serializations of RDF, whether specifically or otherwise.
-public enum Serialization: Sendable {
+public enum Serialization: Codable, Sendable {
 
     /// The JSON-LD serialization of RDF.
     @available(*, deprecated, message: "JSON-LD is not yet supported.")

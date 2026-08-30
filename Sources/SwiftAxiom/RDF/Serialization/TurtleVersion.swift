@@ -6,7 +6,7 @@
 //  © 2026 Dylan Umsted <dylan@umsted.org>.
 //
 
-public enum TurtleVersion: String, ExpressibleByStringLiteral, Sendable {
+public enum TurtleVersion: String, ExpressibleByStringLiteral, Codable, Sendable {
     /// An unknown version of the Terse Triple Language.
     case unknown
 

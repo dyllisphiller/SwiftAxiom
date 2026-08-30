@@ -6,6 +6,6 @@
 //  © 2026 Dylan Umsted <dylan@umsted.org>.
 //
 
-public struct BlankNode: Identifiable, Sendable {
+public struct BlankNode: Codable, Identifiable, Sendable {
     public let id: String
 }

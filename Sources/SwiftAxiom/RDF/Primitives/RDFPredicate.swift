@@ -6,6 +6,6 @@
 //  © 2026 Dylan Umsted <dylan@umsted.org>.
 //
 
-public enum RDFPredicate: Sendable {
+public enum RDFPredicate: Codable, Sendable {
     case iri(IRI)
 }

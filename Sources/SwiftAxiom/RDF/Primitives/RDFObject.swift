@@ -6,7 +6,7 @@
 //  © 2026 Dylan Umsted <dylan@umsted.org>.
 //
 
-public enum RDFObject: Sendable {
+public enum RDFObject: Codable, Sendable {
     case blankNode(BlankNode)
     case decimal(_ wholePart: Int, _ fractionalPart: Int)
     case double(Double)

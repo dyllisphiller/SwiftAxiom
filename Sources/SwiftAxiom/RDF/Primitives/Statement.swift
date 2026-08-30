@@ -7,7 +7,7 @@
 //
 
 /// Represents a single triple (subject–predicate–object) or quad (subject–predicate–object–graph) statement.
-public struct Statement: Sendable {
+public struct Statement: Codable, Sendable {
 
     /// The resource being described by the statement.
     public let subject: RDFSubject

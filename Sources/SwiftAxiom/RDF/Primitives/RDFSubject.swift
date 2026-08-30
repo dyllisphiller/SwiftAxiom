@@ -6,7 +6,7 @@
 //  © 2026 Dylan Umsted <dylan@umsted.org>.
 //
 
-public enum RDFSubject: Sendable {
+public enum RDFSubject: Codable, Sendable {
     case blankNode(BlankNode)
     case iri(String)
     case prefixedName(String)
