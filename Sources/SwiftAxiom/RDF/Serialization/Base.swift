@@ -11,7 +11,6 @@
 /// Some serializations take only a single base that applies to the entire document. Others apply only to statements
 /// made after a base declaration.
 ///
-/// - Note: Neither ``Base/init(_:)`` nor ``Base/init(iri:)`` validate IRI bases.
 /// - Note: IRIs encompass more than HTTP schemes; the behavior of using a URN as a base is undefined and is currently
 ///         unsupported.
 public struct Base {
@@ -19,11 +18,13 @@ public struct Base {
     public let iri: String
 
     /// Creates a ``Base`` from a `String`.
+    /// - Note: Does not validate IRI bases.
     public init(_ iri: String) {
         self.iri = iri
     }
 
     /// Creates a ``Base`` using a closure.
+    /// - Note: Does not validate IRI bases.
     public init(iri: () -> String) {
         self.iri = iri()
     }
