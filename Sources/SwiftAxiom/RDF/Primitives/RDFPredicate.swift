@@ -6,7 +6,11 @@
 //  © 2026 Dylan Umsted <dylan@umsted.org>.
 //
 
-public enum RDFPredicate: Codable, Sendable {
+public enum RDFPredicate: ExpressibleByIRI, Codable, Sendable {
+    /// An absolute or relative IRI.
     case iri(IRI)
-    case prefixedName(String)
+
+    public init(iri: IRI) {
+        self = .iri(iri)
+    }
 }

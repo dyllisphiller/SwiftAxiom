@@ -6,9 +6,13 @@
 //  © 2026 Dylan Umsted <dylan@umsted.org>.
 //
 
-public enum RDFSubject: Codable, Sendable {
+public enum RDFSubject: ExpressibleByIRI, Codable, Sendable {
     case blankNode(BlankNode)
-    case iri(String)
-    case prefixedName(String)
+    case iri(IRI)
+    case prefixedName(PrefixedName)
     indirect case tripleTerm(Statement)
+
+    public init(iri: IRI) {
+        self = .iri(iri)
+    }
 }

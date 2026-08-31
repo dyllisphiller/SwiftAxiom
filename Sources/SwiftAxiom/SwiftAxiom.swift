@@ -6,9 +6,30 @@
 //  © 2026 Dylan Umsted <dylan@umsted.org>.
 //
 
+let ex: Namespace = Namespace(IRI(string: "https://example.com/"), label: "Example Namespace")
+
+
 let someGraph: Graph = Graph {
-    Base { "https://example.com/" }
-    Prefix("ex") { "https://example.com/" }
-    Prefix("foaf") { "https://xmlns.com/foaf/0.1/" }
     Serialization.ttl(.v1_2)
+    Base { "https://example.com/" }
+    // (exNS)
+    // (Namespace.FOAF)
+    
+    Statement(
+        .iri(.empty),
+        .iri(Namespace.RDF["type"]),
+        .iri(Namespace.OWL["ontology"])
+    )
+
+    Statement(
+        .iri(ex["john"]),
+        .iri(Namespace.RDF["type"]),
+        .iri(Namespace.FOAF["Person"])
+    )
+
+    Statement(
+        .iri(ex["john"]),
+        .iri(Namespace.FOAF["name"]),
+        .literal(RDFLiteral("John Smith"))
+    )
 }
